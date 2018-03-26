@@ -1,6 +1,5 @@
 # dva-callback
-
-Auto callback plugin for dva. :clap: You don't need to call callback manually any more.
+dva插件，自动在effect完成时执行callback，免去了手动执行的麻烦
 
 ---
 
@@ -13,10 +12,12 @@ $ npm install dva-callback --save
 ## Usage
 
 ```javascript
-import createCallback from 'dva-loading';
+import createCallback from 'dva-callback';
 
 const app = dva();
-app.use(createCallback(opts));
+app.use(createCallback({
+  alias: 'callback' // 回调函数的名字，默认为'callback'
+));
 ```
 
 ```javascript
@@ -29,11 +30,9 @@ this.props.dispatch({
 });
 ```
 
-Then we can access input callback in dispatch.
-
 ### opts
 
-- `opts.alias`: property key of callback, type String, Default `callback`
+- `opts.alias`: 回调函数的名字，默认为'callback'
 
 ## License
 
