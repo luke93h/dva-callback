@@ -30,9 +30,9 @@ this.props.dispatch({
 });
 ```
 
-### opts
+### createCallback参数
 
-- `opts.alias`: 回调函数的名字，默认为'callback'
+- `alias`: 回调函数的名字，默认为'callback'
 
 ## License
 
